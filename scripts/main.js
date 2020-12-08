@@ -104,3 +104,28 @@ console.log(adults)
 
 //using .map() to get family member names
 // fam.innerHTML = family.map((famMember) => `<h3>${famMember.name}</h3>`).join("")
+
+
+//exercise#5
+//bracket vs. dot notation
+
+let employee = {
+    name: "Jeff Winger",
+    age: 37,
+    department: "legal",
+    hire_date: "09/22/2010"
+}
+
+employee.vacation_days = 20
+
+
+//eom is a variable, so use brackets
+let eom = "employee_of_the_month";
+employee[eom] = false
+
+for (let key in employee) {
+    console.log(employee[key])
+}
+
+console.log(`Our company's lawyer is ${employee.name}`)
+console.log(`Jeff was hired on ${employee["hire_date"]}`)
